@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="R2HandoverSim: A Simulation Framework and Benchmark for Robot-to-Human Object Handovers">
+  <meta name="description" content="R2HandoverSim is a simulation framework and benchmark for reproducible robot-to-human object handover evaluation.">
+  <meta name="keywords" content="robot-to-human handover, human-robot interaction, language grounding, human-usage regions, trustworthy robotics, robot grasping, embodied AI">
+  <meta name="author" content="Hanxin Zhang, Abdulqader Dhafer, Hongbiao Dong, Zhou Daniel Hao">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="DANiLab, University of Leicester">
+  <meta property="og:title" content="R2HandoverSim: A Simulation Framework and Benchmark for Robot-to-Human Object Handovers">
+  <meta property="og:description" content="R2HandoverSim is a simulation framework and benchmark for reproducible robot-to-human object handover evaluation.">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
+  <meta property="article:published_time" content="2026-01-01T00:00:00.000Z">
+  <meta property="article:author" content="Hanxin Zhang">
+  <meta property="article:section" content="Research">
+  <meta property="article:tag" content="Robot-to-Human Handover">
+  <meta property="article:tag" content="Language Grounding">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@DANiLab_UoL">
+  <meta name="twitter:creator" content="@HanxinZhang">
+  <meta name="twitter:title" content="R2HandoverSim: A Simulation Framework and Benchmark for Robot-to-Human Object Handovers">
+  <meta name="twitter:description" content="R2HandoverSim is a simulation framework and benchmark for reproducible robot-to-human object handover evaluation.">
+  <meta name="twitter:image" content="">
+  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+
+  <!-- Academic/Research Specific -->
+  <meta name="citation_title" content="R2HandoverSim: A Simulation Framework and Benchmark for Robot-to-Human Object Handovers">
+  <meta name="citation_author" content="Zhang, Hanxin">
+  <meta name="citation_author" content="Dhafer, Abdulqader">
+  <meta name="citation_author" content="Dong, Hongbiao">
+  <meta name="citation_author" content="Hao, Zhou Daniel">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="IEEE/RSJ International Conference on Intelligent Robots and Systems">
+  <meta name="citation_pdf_url" content="r2handoversim_arxiv.pdf">
+  
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#2563eb">
+  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+
+  <title>R2HandoverSim - Zhang et al.</title>
+  
+  <!-- Critical CSS - Load synchronously -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css?v=20260620-42">
+  
+  <!-- Non-critical CSS - Load asynchronously -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  <!-- Fallback for browsers that don't support preload -->
+  <noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+  
+  <!-- Fonts - Optimized loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Defer non-critical JavaScript -->
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/index.js?v=20260620-5"></script>
+  
+  <!-- Structured Data for Academic Papers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "R2HandoverSim: A Simulation Framework and Benchmark for Robot-to-Human Object Handovers",
+    "description": "R2HandoverSim is a simulation framework and benchmark for reproducible robot-to-human object handover evaluation.",
+    "author": [
+      {"@type": "Person", "name": "Hanxin Zhang", "affiliation": {"@type": "Organization", "name": "DANiLab, University of Leicester"}},
+      {"@type": "Person", "name": "Abdulqader Dhafer", "affiliation": {"@type": "Organization", "name": "DANiLab, University of Leicester"}},
+      {"@type": "Person", "name": "Hongbiao Dong", "affiliation": {"@type": "Organization", "name": "University of Birmingham"}},
+      {"@type": "Person", "name": "Zhou Daniel Hao", "affiliation": {"@type": "Organization", "name": "DANiLab, University of Leicester"}}
+    ],
+    "datePublished": "2026-06-18",
+    "publisher": {
+      "@type": "Organization",
+      "name": "IEEE/RSJ International Conference on Intelligent Robots and Systems"
+    },
+    "url": "",
+    "image": "",
+    "keywords": ["robot-to-human handover", "human-robot interaction", "language grounding", "human-usage regions", "trustworthy robotics", "robot grasping"],
+    "abstract": "R2HandoverSim is a simulation benchmark for robot-to-human object handovers.",
+    "citation": "@inproceedings{zhang2026r2handoversim, title={R2HandoverSim: A Simulation Framework and Benchmark for Robot-to-Human Object Handovers}, author={Zhang, Hanxin and Dhafer, Abdulqader and Dong, Hongbiao and Hao, Zhou Daniel}, booktitle={IEEE/RSJ International Conference on Intelligent Robots and Systems}, year={2026}}",
+    "isAccessibleForFree": true,
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "mainEntity": {
+      "@type": "WebPage",
+      "@id": ""
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "RESEARCH_AREA_1"
+      },
+      {
+        "@type": "Thing", 
+        "name": "RESEARCH_AREA_2"
+      }
+    ]
+  }
+  </script>
+  
+  <!-- Website/Organization Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "DANiLab, University of Leicester",
+    "url": "https://le.ac.uk",
+    "sameAs": []
+  }
+  </script>
+</head>
+<body>
+<canvas id="fireworks-canvas"></canvas>
+
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+
+  <main id="main-content">
+  <section class="hero paper-hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">R2HandoverSim: A Simulation Framework and Benchmark <br class="desktop-title-break">for Robot-to-Human Object Handovers</h1>
+              <div class="is-size-5 publication-authors publication-author-list">
+                <span class="author-block">
+                <a href="https://hanxin-zhang.github.io/" target="_blank" rel="noopener">Hanxin Zhang</a><sup>1,2</sup><span class="author-separator">,</span></span>
+              <span class="author-block">
+                <a href="https://adhafer.github.io/" target="_blank" rel="noopener">Abdulqader Dhafer</a><sup>1,2</sup><span class="author-separator">,</span></span>
+              <span class="author-block">
+                <a href="https://www.birmingham.ac.uk/staff/profiles/metallurgy/dong-hongbiao" target="_blank" rel="noopener">Hongbiao Dong</a><sup>3</sup><span class="author-separator">,</span></span>
+              <span class="author-block">
+                <a href="https://le.ac.uk/people/daniel-hao" target="_blank" rel="noopener">Zhou Daniel Hao</a><sup>1,2</sup>&#9993;
+              </span>
+            </div>
+
+            <div class="is-size-6 publication-authors publication-affiliations">
+              <span class="author-block publication-affiliation-lines">
+                <span class="publication-affiliation-line"><sup>1</sup>DANiLab, University of Leicester</span>
+                <span class="publication-affiliation-line"><sup>2</sup>School of Computing and Mathematical Sciences,<br class="mobile-affiliation-break"> University of Leicester</span>
+                <span class="publication-affiliation-line"><sup>3</sup>School of Metallurgy and Materials, University of Birmingham</span>
+              </span>
+              <span class="venue-badge">
+                <span class="venue-badge-main">Accepted by IEEE/RSJ International Conference on <br class="desktop-venue-break">Intelligent Robots and Systems (IROS 2026)</span>
+              </span>
+            </div>
+
+            <div class="publication-logo-strip" aria-label="DANiLab and University of Leicester logos">
+              <a class="publication-logo-link" href="https://www.danilab.org/" target="_blank" rel="noopener" aria-label="Visit DANiLab">
+                <img
+                  class="publication-affiliation-logo publication-affiliation-logo-danilab"
+                  src="assets/danilab.png"
+                  alt="DANiLab">
+              </a>
+              <a class="publication-logo-link publication-logo-link-uol" href="https://le.ac.uk/" target="_blank" rel="noopener" aria-label="Visit University of Leicester">
+                <img
+                  class="publication-affiliation-logo publication-affiliation-logo-uol"
+                  src="assets/RedBlockUoLlogo.png"
+                  alt="University of Leicester">
+              </a>
+            </div>
+
+                  <div class="column has-text-centered publication-links-column">
+                    <div class="publication-links">
+                      <!-- Paper button -->
+                      <span class="link-block">
+                        <a href="r2handoversim_arxiv.pdf"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                      <!-- arXiv button -->
+                      <span class="link-block">
+                        <a href="r2handoversim_arxiv.pdf"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="ai ai-arxiv"></i>
+                        </span>
+                        <span>arXiv</span>
+                      </a>
+                    </span>
+
+                    <!-- Code button -->
+                    <span class="link-block">
+                      <a class="external-link button is-normal is-rounded is-dark is-disabled"
+                      aria-disabled="true" role="button" tabindex="-1">
+                      <span class="icon">
+                        <i class="fas fa-code"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
+                  </span>
+                </div>
+                <p class="release-note">We are cleaning up the code, and it will be released soon.</p>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<hr class="section-divider">
+
+<!-- Teaser figure -->
+<section class="hero teaser">
+  <div class="container is-max-desktop teaser-container">
+    <div class="hero-body">
+      <p class="teaser-intro">
+        Introduction
+      </p>
+      <p class="teaser-intro-copy">What is R2HandoverSim?</p>
+      <div class="teaser-layout-shell" data-teaser-flip-shell>
+        <div class="teaser-flip-card" data-teaser-flip-card>
+          <div class="teaser-flip-face teaser-flip-front">
+            <figure class="teaser-layout teaser-figure-card">
+              <div class="teaser-figure-column">
+                <div class="teaser-image-wrapper">
+                  <img src="assets/fig1.png" alt="R2HandoverSim benchmark environment overview" class="teaser-image">
+                  <button class="teaser-flip-button teaser-play-button" type="button" data-teaser-flip-button aria-label="Play R2HandoverSim video">
+                    <span class="icon teaser-play-icon" aria-hidden="true"><i class="fas fa-play"></i></span>
+                    <span>Watch Video</span>
+                  </button>
+                </div>
+              </div>
+              <figcaption class="teaser-figure-caption">
+                <strong>Fig. 1: Overview of the R2HandoverSim benchmark environment.</strong>
+                A UR5e manipulator delivers an object to a static MANO hand. The green sphere denotes the valid handover space used for reachability evaluation.
+              </figcaption>
+            </figure>
+          </div>
+          <div class="teaser-flip-face teaser-flip-back" aria-hidden="true">
+            <div class="teaser-video-card">
+              <button class="teaser-flip-button teaser-fullscreen-button" type="button" data-teaser-fullscreen-button aria-label="Open R2HandoverSim video fullscreen">
+                <span class="icon" aria-hidden="true"><i class="fas fa-expand"></i></span>
+                <span>Fullscreen</span>
+              </button>
+              <video class="teaser-video" src="assets/R2HandoverSim_video_v2.mp4" controls preload="metadata" playsinline></video>
+              <button class="teaser-flip-button teaser-flip-back-button" type="button" data-teaser-flip-back-button aria-label="Return to Fig. 1">
+                <span class="icon" aria-hidden="true"><i class="fas fa-undo"></i></span>
+                <span>Back</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- End teaser figure -->
+
+<!-- Benchmark overview -->
+<section class="section hero benchmark-section" id="benchmark">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Benchmark</h2>
+        <p class="benchmark-lead">
+          R2HandoverSim enables standardized, reproducible evaluation of robot-to-human handover methods.
+        </p>
+
+        <article class="benchmark-block benchmark-block-split">
+          <div class="benchmark-copy">
+            <span class="benchmark-kicker">Trial Protocol</span>
+            <h3>Standardized evaluation protocol</h3>
+            <p>
+              Each method outputs a grasp pose and a handover pose; R2HandoverSim then runs grasping, planning, approach motion, and evaluation.
+            </p>
+          </div>
+          <figure class="benchmark-media">
+            <a href="assets/fig2.png" target="_blank" rel="noopener" aria-label="Open Fig. 2 trial protocol full size">
+              <img src="assets/fig2.png" alt="Trial protocol of R2HandoverSim" loading="lazy">
+            </a>
+            <figcaption>Fig. 2: Trial protocol of R2HandoverSim.</figcaption>
+          </figure>
+        </article>
+
+        <article class="benchmark-block benchmark-block-split benchmark-block-reverse">
+          <div class="benchmark-copy">
+            <span class="benchmark-kicker">Objects and Data</span>
+            <h3>16 daily objects</h3>
+            <p>
+              The benchmark uses 16 daily objects spanning ShapeNet, YCB, and ContactDB, from compact cups to bulky dispensers and functionally constrained tools.
+            </p>
+          </div>
+          <figure class="benchmark-media">
+            <a href="assets/fig3.png" target="_blank" rel="noopener" aria-label="Open Fig. 3 benchmark objects full size">
+              <img src="assets/fig3.png" alt="Sixteen daily benchmark objects" loading="lazy">
+            </a>
+            <figcaption>Fig. 3: The 16 daily benchmark objects.</figcaption>
+          </figure>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End benchmark overview -->
+
+<!-- Evaluation protocol -->
+<section class="section hero benchmark-section benchmark-section-alt" id="evaluation">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Evaluation Protocol</h2>
+        <p class="benchmark-lead">
+          Each trial is evaluated with five binary metrics.
+        </p>
+
+        <div class="metric-grid" aria-label="R2HandoverSim evaluation metrics">
+          <article class="metric-card">
+            <span>Plan</span>
+            <p>A kinematically feasible, collision-free trajectory to the handover pose must exist.</p>
+          </article>
+          <article class="metric-card">
+            <span>Reach</span>
+            <p>The object must be delivered near the receiver's hand.</p>
+          </article>
+          <article class="metric-card">
+            <span>Stability</span>
+            <p>The gripper must physically close on the object without dropping it.</p>
+          </article>
+          <article class="metric-card">
+            <span>Affordance</span>
+            <p>The robot's grasp must not occupy the receiver's intended grasp region.</p>
+          </article>
+          <article class="metric-card">
+            <span>Safe</span>
+            <p>The delivery motion must complete without contacting the human hand.</p>
+          </article>
+        </div>
+
+        <article class="benchmark-block">
+          <div class="benchmark-copy benchmark-copy-centered">
+            <span class="benchmark-kicker">Failure Modes</span>
+            <h3>Granular metrics reveal more than success rate alone</h3>
+            <p>
+              A trial is attributed to the first evaluated criterion that fails; consequently, the reported failure rates are mutually exclusive and sum to 1 - SR within each split.
+            </p>
+          </div>
+          <figure class="benchmark-media benchmark-media-small">
+            <a href="assets/fig5.png" target="_blank" rel="noopener" aria-label="Open Fig. 5 success and failure cases full size">
+              <img src="assets/fig5.png" alt="Representative success and failure cases in simulation" loading="lazy">
+            </a>
+            <figcaption>Fig. 5: Representative success and failure cases in simulation.</figcaption>
+          </figure>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End evaluation protocol -->
+
+<!-- Baseline comparison -->
+<section class="section hero benchmark-section" id="baselines">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Baseline Comparison</h2>
+        <p class="benchmark-lead">
+          Four baselines are compared on predicted shared grasp poses under S0, S1, and average performance.
+        </p>
+
+        <article class="benchmark-block benchmark-split-block">
+          <div class="benchmark-split-copy">
+            <div class="benchmark-copy">
+              <span class="benchmark-kicker">Evaluation Splits</span>
+              <h3>S0 and S1</h3>
+            </div>
+            <div class="split-grid" aria-label="Evaluation split definitions">
+              <article class="split-card">
+                <span>S0</span>
+                <p>Objects with relatively unconstrained handover configurations.</p>
+              </article>
+              <article class="split-card">
+                <span>S1</span>
+                <p>Objects with stronger functional constraints on grasp and handover orientation.</p>
+              </article>
+            </div>
+          </div>
+          <a class="benchmark-split-media" href="assets/fig8.png" target="_blank" rel="noopener" aria-label="Open S0 and S1 object split figure full size"></a>
+        </article>
+
+        <article class="benchmark-block benchmark-block-table">
+          <div class="benchmark-copy benchmark-copy-centered">
+            <span class="benchmark-kicker">Simulation Results</span>
+            <h3>Intent-Handover achieves the highest average success rate</h3>
+            <p>
+              Contact-Handover leads in S0 success rate; Intent-Handover leads in average success rate and S1 success rate.
+            </p>
+          </div>
+          <figure class="benchmark-media benchmark-media-table">
+            <a href="assets/table1.png" target="_blank" rel="noopener" aria-label="Open Table I baseline comparison full size">
+              <img src="assets/table1.png" alt="Baseline comparison on R2HandoverSim under S0 and S1" loading="lazy">
+            </a>
+            <figcaption>Table I: Baseline comparison on R2HandoverSim under S0 and S1.</figcaption>
+          </figure>
+        </article>
+
+        <article class="benchmark-block">
+          <div class="benchmark-copy benchmark-copy-centered">
+            <span class="benchmark-kicker">Qualitative Comparison</span>
+            <h3>Predicted handover configurations across four baselines</h3>
+            <p>
+              Each row shows grasp pose, approach trajectory, and final handover pose for the same object-hand pair.
+            </p>
+          </div>
+          <figure class="benchmark-media benchmark-media-wide">
+            <a href="assets/fig4.png" target="_blank" rel="noopener" aria-label="Open Fig. 4 qualitative comparison full size">
+              <img src="assets/fig4.png" alt="Qualitative comparison of predicted handover configurations across four baselines" loading="lazy">
+            </a>
+            <figcaption>Fig. 4: Qualitative comparison of predicted handover configurations across four baselines.</figcaption>
+          </figure>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End baseline comparison -->
+
+<!-- Sim-to-real validation -->
+<section class="section hero benchmark-section benchmark-section-alt" id="sim-to-real">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Sim-to-Real Validation</h2>
+        <p class="benchmark-lead">
+          Four baselines are deployed on the physical platform with 30 participants and 600 total trials.
+        </p>
+
+        <div class="benchmark-two-col">
+          <article class="benchmark-block benchmark-block-compact">
+            <div class="benchmark-copy">
+              <span class="benchmark-kicker">Real Hardware</span>
+              <h3>UR5e with Robotiq 2F-85 gripper</h3>
+              <p>
+                Intent-Handover achieves the highest real-world success rate (73.3%), followed by FC-Handover (63.3%).
+              </p>
+            </div>
+            <figure class="benchmark-media">
+              <a href="assets/fig6.png" target="_blank" rel="noopener" aria-label="Open Fig. 6 real hardware setup full size">
+                <img src="assets/fig6.png" alt="Real hardware setup for the sim-to-real experiment" loading="lazy">
+              </a>
+              <figcaption>Fig. 6: Real hardware setup for the sim-to-real experiment.</figcaption>
+            </figure>
+          </article>
+
+          <article class="benchmark-block benchmark-block-compact benchmark-block-table">
+            <div class="benchmark-copy">
+              <span class="benchmark-kicker">Transfer Results</span>
+              <h3>Real-world result minus simulation average</h3>
+              <p>
+                Contact-Handover is the only method with negative transfer.
+              </p>
+            </div>
+            <figure class="benchmark-media benchmark-media-table benchmark-media-table-compact">
+              <a href="assets/table2.png" target="_blank" rel="noopener" aria-label="Open Table II sim-to-real transfer results full size">
+                <img src="assets/table2.png" alt="Sim-to-real transfer results" loading="lazy">
+              </a>
+              <figcaption>Table II: Sim-to-real transfer results.</figcaption>
+            </figure>
+          </article>
+        </div>
+
+        <article class="benchmark-block">
+          <div class="benchmark-copy benchmark-copy-centered">
+            <span class="benchmark-kicker">User Study</span>
+            <h3>Subjective ratings reveal human-centric handover quality</h3>
+            <p>
+              Intent-Handover ranks first in simulation success rate and user ratings; Contact-Handover ranks second in simulation success rate but lowest in comfort and safety.
+            </p>
+          </div>
+          <div class="study-grid" aria-label="User study research question, hypothesis, and findings">
+            <article class="study-card">
+              <span>Research Question</span>
+              <p>To what extent does simulation success rate predict perceived handover quality beyond task completion?</p>
+            </article>
+            <article class="study-card">
+              <span>Hypothesis</span>
+              <p>Higher simulation success rate should correspond to higher comfort, perceived safety, and naturalness.</p>
+            </article>
+            <article class="study-card study-card-finding">
+              <span>Finding</span>
+              <p>Partially refuted: a higher success rate does not necessarily mean better user experience; functional-region affordance is critical to perceived handover quality.</p>
+            </article>
+          </div>
+          <figure class="benchmark-media benchmark-media-wide">
+            <a href="assets/fig7.png" target="_blank" rel="noopener" aria-label="Open Fig. 7 subjective ratings full size">
+              <img src="assets/fig7.png" alt="Subjective ratings for handover comfort, safety, and naturalness" loading="lazy">
+            </a>
+            <figcaption>Fig. 7: Subjective ratings for handover comfort, safety, and naturalness.</figcaption>
+          </figure>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End sim-to-real validation -->
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title is-3">BibTeX</h2>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <pre id="bibtex-code"><code>@inproceedings{zhang2026r2handoversim,
+  title={R2HandoverSim: A Simulation Framework and Benchmark for Robot-to-Human Object Handovers},
+  author={Zhang, Hanxin and Dhafer, Abdulqader and Dong, Hongbiao and Hao, Zhou Daniel},
+  booktitle={IEEE/RSJ International Conference on Intelligent Robots and Systems},
+  year={2026}
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+  </body>
+  </html>
