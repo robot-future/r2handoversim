@@ -3607,6 +3607,7 @@ code {
 }
 
 .benchmark-media a {
+  position: relative;
   display: block;
   padding: 0.42rem;
   background: #FFFFFF;
@@ -3683,6 +3684,10 @@ code {
   max-width: 620px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.mobile-zoom-hint {
+  display: none;
 }
 
 .benchmark-split-block {
@@ -3917,23 +3922,70 @@ code {
     padding: 0.34rem;
   }
 
-  .benchmark-media-table {
+  .benchmark-media-wide,
+  .benchmark-media-small {
+    max-width: min(340px, 100%);
+  }
+
+  .benchmark-media-wide img,
+  .benchmark-media-small img,
+  .benchmark-two-col .benchmark-media img {
+    width: auto;
     max-width: 100%;
+    max-height: 230px;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: contain;
+  }
+
+  .benchmark-two-col .benchmark-media {
+    max-width: min(330px, 100%);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .benchmark-media-table {
+    max-width: min(330px, 100%);
   }
 
   .benchmark-media-table a {
-    padding: 0.42rem;
+    padding: 0.3rem;
     -webkit-overflow-scrolling: touch;
   }
 
   .benchmark-media-table img {
-    width: auto;
-    max-width: none;
-    min-width: 680px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    max-height: 190px;
+    object-fit: contain;
   }
 
   .benchmark-media-table-compact img {
-    min-width: 520px;
+    max-height: 165px;
+    min-width: 0;
+  }
+
+  .mobile-zoom-hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0.42rem auto 0;
+    padding: 0.25rem 0.48rem;
+    color: var(--nature-teal-dark);
+    background: rgba(26, 111, 168, 0.08);
+    border: 1px solid rgba(26, 111, 168, 0.22);
+    border-radius: 999px;
+    box-shadow: none;
+    font-size: 0.65rem;
+    font-weight: 800;
+    line-height: 1;
+    white-space: nowrap;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    pointer-events: none;
   }
 
   .benchmark-media-small {
@@ -4001,12 +4053,27 @@ code {
     grid-column: auto;
   }
 
+  .benchmark-media-wide,
+  .benchmark-media-small,
+  .benchmark-two-col .benchmark-media,
+  .benchmark-media-table {
+    max-width: min(300px, 100%);
+  }
+
+  .benchmark-media-wide img,
+  .benchmark-media-small img,
+  .benchmark-two-col .benchmark-media img {
+    max-height: 205px;
+  }
+
   .benchmark-media-table img {
-    min-width: 620px;
+    min-width: 0;
+    max-height: 168px;
   }
 
   .benchmark-media-table-compact img {
-    min-width: 500px;
+    min-width: 0;
+    max-height: 145px;
   }
 }
 
