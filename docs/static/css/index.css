@@ -334,7 +334,7 @@ main > section.section:nth-of-type(even) {
 }
 
 .paper-hero .hero-body {
-  padding-bottom: 0;
+  padding-bottom: 2.5rem;
 }
 
 .teaser .hero-body {
