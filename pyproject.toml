@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "r2handoversim"
+version = "0.11.0"
+description = "Isaac Sim robot-to-human handover replay demos and evaluation"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.23"]
+license = "MIT"
+license-files = ["LICENSE", "THIRD_PARTY.md"]
+
+[project.optional-dependencies]
+planning = ["scipy>=1.10"]
+assets = ["trimesh>=4", "Pillow>=9"]
+
+[project.urls]
+Repository = "https://github.com/robot-future/r2handoversim"
+Issues = "https://github.com/robot-future/r2handoversim/issues"
+
+[project.scripts]
+r2handoversim = "r2handoversim.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+r2handoversim = ["assets/*.json", "assets/*.txt", "assets/*.jsonl.gz"]

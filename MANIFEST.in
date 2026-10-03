@@ -1,0 +1,5 @@
+include LICENSE CITATION.cff CHANGELOG.md THIRD_PARTY.md
+recursive-include configs *.json
+recursive-include docs *.md *.png *.jpg *.gif *.json
+recursive-include scripts *.py
+recursive-include tests *.py

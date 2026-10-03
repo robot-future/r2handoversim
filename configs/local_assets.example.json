@@ -1,0 +1,13 @@
+{
+  "schema_version": "handover.local_assets.v1",
+  "robot_usd": "/path/to/danilab_ur5e/danilab_ur5e.usd",
+  "object_mesh_root": "/path/to/Text2HOI/data/han/meshes",
+  "robot_translation": [
+    -0.5625,
+    -0.36,
+    -0.02
+  ],
+  "object_aliases": {
+    "hammer": "hammers"
+  }
+}

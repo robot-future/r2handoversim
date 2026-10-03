@@ -1,0 +1,1745 @@
+{
+  "schema_version": "handover.release_validation.v1",
+  "version": "0.10.0",
+  "date": "2026-09-30",
+  "scope": "Local original-asset integration samples, not recovered paper experiments; S1 uses authored region boxes and an illustrative split",
+  "environment": {
+    "isaacsim": "5.0.0",
+    "gpu": "RTX 4070",
+    "python": "3.11"
+  },
+  "sampling": "seed 27, two neutral MANO templates, bounded SE(3), four fixed receiver scenes per object",
+  "runs": [
+    {
+      "run": "can_projection_video",
+      "trials": 16,
+      "frames": 1582,
+      "modes": {
+        "A1": {
+          "trials": 4,
+          "successes": 1,
+          "first_failures": {
+            "plan": 3
+          }
+        },
+        "A2": {
+          "trials": 4,
+          "successes": 4,
+          "first_failures": {}
+        },
+        "A3": {
+          "trials": 4,
+          "successes": 4,
+          "first_failures": {}
+        },
+        "FS": {
+          "trials": 4,
+          "successes": 3,
+          "first_failures": {
+            "plan": 1
+          }
+        }
+      },
+      "trial_results": [
+        {
+          "id": "can_receiver_27_0000_left_FS",
+          "split": "S0",
+          "receiver": {
+            "id": "can_receiver_27_0000_left",
+            "side": "left",
+            "seed": 27,
+            "sample_index": 0,
+            "T_world_hand": [
+              [
+                -0.403292446510483,
+                0.9072779051142772,
+                -0.11917216738415831,
+                -0.49541098525471094
+              ],
+              [
+                -0.8307729608986965,
+                -0.4176201181591457,
+                -0.3679806032229881,
+                -0.37954443434651125
+              ],
+              [
+                -0.38362936543909437,
+                -0.049398783387749945,
+                0.9221649907541534,
+                0.8827003321312511
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "static_world": true
+          },
+          "metrics": {
+            "stability": true,
+            "plan": false,
+            "reach": false,
+            "affordance": null,
+            "safe": true
+          },
+          "first_failure": "plan",
+          "opening_m": 0.0677634560429857,
+          "stability_width_m": 0.07885944641113835,
+          "planning_reason": "ik_failure",
+          "affordance_source": null
+        },
+        {
+          "id": "can_receiver_27_0000_left_A1",
+          "split": "S0",
+          "receiver": {
+            "id": "can_receiver_27_0000_left",
+            "side": "left",
+            "seed": 27,
+            "sample_index": 0,
+            "T_world_hand": [
+              [
+                -0.403292446510483,
+                0.9072779051142772,
+                -0.11917216738415831,
+                -0.49541098525471094
+              ],
+              [
+                -0.8307729608986965,
+                -0.4176201181591457,
+                -0.3679806032229881,
+                -0.37954443434651125
+              ],
+              [
+                -0.38362936543909437,
+                -0.049398783387749945,
+                0.9221649907541534,
+                0.8827003321312511
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "static_world": true
+          },
+          "metrics": {
+            "stability": true,
+            "plan": false,
+            "reach": false,
+            "affordance": null,
+            "safe": true
+          },
+          "first_failure": "plan",
+          "opening_m": 0.07348249850522212,
+          "stability_width_m": 0.08223995276288679,
+          "planning_reason": "collision_or_search_failure",
+          "affordance_source": null
+        },
+        {
+          "id": "can_receiver_27_0000_left_A2",
+          "split": "S0",
+          "receiver": {
+            "id": "can_receiver_27_0000_left",
+            "side": "left",
+            "seed": 27,
+            "sample_index": 0,
+            "T_world_hand": [
+              [
+                -0.403292446510483,
+                0.9072779051142772,
+                -0.11917216738415831,
+                -0.49541098525471094
+              ],
+              [
+                -0.8307729608986965,
+                -0.4176201181591457,
+                -0.3679806032229881,
+                -0.37954443434651125
+              ],
+              [
+                -0.38362936543909437,
+                -0.049398783387749945,
+                0.9221649907541534,
+                0.8827003321312511
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "static_world": true
+          },
+          "metrics": {
+            "stability": true,
+            "plan": true,
+            "reach": true,
+            "affordance": null,
+            "safe": true
+          },
+          "first_failure": null,
+          "opening_m": 0.0704094913464205,
+          "stability_width_m": 0.07491674701100637,
+          "planning_reason": null,
+          "affordance_source": null
+        },
+        {
+          "id": "can_receiver_27_0000_left_A3",
+          "split": "S0",
+          "receiver": {
+            "id": "can_receiver_27_0000_left",
+            "side": "left",
+            "seed": 27,
+            "sample_index": 0,
+            "T_world_hand": [
+              [
+                -0.403292446510483,
+                0.9072779051142772,
+                -0.11917216738415831,
+                -0.49541098525471094
+              ],
+              [
+                -0.8307729608986965,
+                -0.4176201181591457,
+                -0.3679806032229881,
+                -0.37954443434651125
+              ],
+              [
+                -0.38362936543909437,
+                -0.049398783387749945,
+                0.9221649907541534,
+                0.8827003321312511
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "static_world": true
+          },
+          "metrics": {
+            "stability": true,
+            "plan": true,
+            "reach": true,
+            "affordance": null,
+            "safe": true
+          },
+          "first_failure": null,
+          "opening_m": 0.0704094913464205,
+          "stability_width_m": 0.07491674701100637,
+          "planning_reason": null,
+          "affordance_source": null
+        },
+        {
+          "id": "can_receiver_27_0001_right_FS",
+          "split": "S0",
+          "receiver": {
+            "id": "can_receiver_27_0001_right",
+            "side": "right",
+            "seed": 27,
+            "sample_index": 1,
+            "T_world_hand": [
+              [
+                -0.5970992220070535,
+                0.7365625132704214,
+                0.3177234381082581,
+                -0.3661114683168457
+              ],
+              [
+                -0.7420754004466894,
+                -0.6576070315878335,
+                0.12991186265358606,
+                -0.2828510732371834
+              ],
+              [
+                0.3046253750600194,
+                -0.15820447544554106,
+                0.9392415689366309,
+                0.8991731176242256
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "static_world": true
+          },
+          "metrics": {
+            "stability": true,
+            "plan": true,
+            "reach": true,
+            "affordance": null,
+            "safe": true
+          },
+          "first_failure": null,
+          "opening_m": 0.0677634560429857,
+          "stability_width_m": 0.07885944641113835,
+          "planning_reason": null,
+          "affordance_source": null
+        },
+        {
+          "id": "can_receiver_27_0001_right_A1",
+          "split": "S0",
+          "receiver": {
+            "id": "can_receiver_27_0001_right",
+            "side": "right",
+            "seed": 27,
+            "sample_index": 1,
+            "T_world_hand": [
+              [
+                -0.5970992220070535,
+                0.7365625132704214,
+                0.3177234381082581,
+                -0.3661114683168457
+              ],
+              [
+                -0.7420754004466894,
+                -0.6576070315878335,
+                0.12991186265358606,
+                -0.2828510732371834
+              ],
+              [
+                0.3046253750600194,
+                -0.15820447544554106,
+                0.9392415689366309,
+                0.8991731176242256
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "static_world": true
+          },
+          "metrics": {
+            "stability": true,
+            "plan": false,
+            "reach": false,
+            "affordance": null,
+            "safe": true
+          },
+          "first_failure": "plan",
+          "opening_m": 0.07348249850522212,
+          "stability_width_m": 0.08223995276288679,
+          "planning_reason": "collision_or_search_failure",
+          "affordance_source": null
+        },
+        {
+          "id": "can_receiver_27_0001_right_A2",
+          "split": "S0",
+          "receiver": {
+            "id": "can_receiver_27_0001_right",
+            "side": "right",
+            "seed": 27,
+            "sample_index": 1,
+            "T_world_hand": [
+              [
+                -0.5970992220070535,
+                0.7365625132704214,
+                0.3177234381082581,
+                -0.3661114683168457
+              ],
+              [
+                -0.7420754004466894,
+                -0.6576070315878335,
+                0.12991186265358606,
+                -0.2828510732371834
+              ],
+              [
+                0.3046253750600194,
+                -0.15820447544554106,
+                0.9392415689366309,
+                0.8991731176242256
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "static_world": true
+          },
+          "metrics": {
+            "stability": true,
+            "plan": true,
+            "reach": true,
+            "affordance": null,
+            "safe": true
+          },
+          "first_failure": null,
+          "opening_m": 0.0704094913464205,
+          "stability_width_m": 0.07491674701100637,
+          "planning_reason": null,
+          "affordance_source": null
+        },
+        {
+          "id": "can_receiver_27_0001_right_A3",
+          "split": "S0",
+          "receiver": {
+            "id": "can_receiver_27_0001_right",
+            "side": "right",
+            "seed": 27,
+            "sample_index": 1,
+            "T_world_hand": [
+              [
+                -0.5970992220070535,
+                0.7365625132704214,
+                0.3177234381082581,
+                -0.3661114683168457
+              ],
+              [
+                -0.7420754004466894,
+                -0.6576070315878335,
+                0.12991186265358606,
+                -0.2828510732371834
+              ],
+              [
+                0.3046253750600194,
+                -0.15820447544554106,
+                0.9392415689366309,
+                0.8991731176242256
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "static_world": true
+          },
+          "metrics": {
+            "stability": true,
+            "plan": true,
+            "reach": true,
+            "affordance": null,
+            "safe": true
+          },
+          "first_failure": null,
+          "opening_m": 0.0704094913464205,
+          "stability_width_m": 0.07491674701100637,
+          "planning_reason": null,
+          "affordance_source": null
+        },
+        {
+          "id": "can_receiver_27_0002_left_FS",
+          "split": "S0",
+          "receiver": {
+            "id": "can_receiver_27_0002_left",
+            "side": "left",
+            "seed": 27,
+            "sample_index": 2,
+            "T_world_hand": [
+              [
+                -0.7248326893911431,
+                0.4808363004783428,
+                -0.4933700685411546,
+                -0.43267303233122706
+              ],
+              [
+                -0.5930858548016341,
+                -0.7998936411700454,
+                0.09175691608778966,
+                -0.42012814660192876
+              ],
+              [
+                -0.35052352449474455,
+                0.35911922109242145,
+                0.8649662674450113,
+                0.8962431102513317
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "static_world": true
+          },
+          "metrics": {
+            "stability": true,
+            "plan": true,
+            "reach": true,
+            "affordance": null,
+            "safe": true
+          },
+          "first_failure": null,
+          "opening_m": 0.0677634560429857,
+          "stability_width_m": 0.07885944641113835,
+          "planning_reason": null,
+          "affordance_source": null
+        },
+        {
+          "id": "can_receiver_27_0002_left_A1",
+          "split": "S0",
+          "receiver": {
+            "id": "can_receiver_27_0002_left",
+            "side": "left",
+            "seed": 27,
+            "sample_index": 2,
+            "T_world_hand": [
+              [
+                -0.7248326893911431,
+                0.4808363004783428,
+                -0.4933700685411546,
+                -0.43267303233122706
+              ],
+              [
+                -0.5930858548016341,
+                -0.7998936411700454,
+                0.09175691608778966,
+                -0.42012814660192876
+              ],
+              [
+                -0.35052352449474455,
+                0.35911922109242145,
+                0.8649662674450113,
+                0.8962431102513317
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "static_world": true
+          },
+          "metrics": {
+            "stability": true,
+            "plan": false,
+            "reach": false,
+            "affordance": null,
+            "safe": true
+          },
+          "first_failure": "plan",
+          "opening_m": 0.07348249850522212,
+          "stability_width_m": 0.08223995276288679,
+          "planning_reason": "collision_or_search_failure",
+          "affordance_source": null
+        },
+        {
+          "id": "can_receiver_27_0002_left_A2",
+          "split": "S0",
+          "receiver": {
+            "id": "can_receiver_27_0002_left",
+            "side": "left",
+            "seed": 27,
+            "sample_index": 2,
+            "T_world_hand": [
+              [
+                -0.7248326893911431,
+                0.4808363004783428,
+                -0.4933700685411546,
+                -0.43267303233122706
+              ],
+              [
+                -0.5930858548016341,
+                -0.7998936411700454,
+                0.09175691608778966,
+                -0.42012814660192876
+              ],
+              [
+                -0.35052352449474455,
+                0.35911922109242145,
+                0.8649662674450113,
+                0.8962431102513317
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "static_world": true
+          },
+          "metrics": {
+            "stability": true,
+            "plan": true,
+            "reach": true,
+            "affordance": null,
+            "safe": true
+          },
+          "first_failure": null,
+          "opening_m": 0.0704094913464205,
+          "stability_width_m": 0.07491674701100637,
+          "planning_reason": null,
+          "affordance_source": null
+        },
+        {
+          "id": "can_receiver_27_0002_left_A3",
+          "split": "S0",
+          "receiver": {
+            "id": "can_receiver_27_0002_left",
+            "side": "left",
+            "seed": 27,
+            "sample_index": 2,
+            "T_world_hand": [
+              [
+                -0.7248326893911431,
+                0.4808363004783428,
+                -0.4933700685411546,
+                -0.43267303233122706
+              ],
+              [
+                -0.5930858548016341,
+                -0.7998936411700454,
+                0.09175691608778966,
+                -0.42012814660192876
+              ],
+              [
+                -0.35052352449474455,
+                0.35911922109242145,
+                0.8649662674450113,
+                0.8962431102513317
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "static_world": true
+          },
+          "metrics": {
+            "stability": true,
+            "plan": true,
+            "reach": true,
+            "affordance": null,
+            "safe": true
+          },
+          "first_failure": null,
+          "opening_m": 0.0704094913464205,
+          "stability_width_m": 0.07491674701100637,
+          "planning_reason": null,
+          "affordance_source": null
+        },
+        {
+          "id": "can_receiver_27_0003_right_FS",
+          "split": "S0",
+          "receiver": {
+            "id": "can_receiver_27_0003_right",
+            "side": "right",
+            "seed": 27,
+            "sample_index": 3,
+            "T_world_hand": [
+              [
+                -0.060495386888890446,
+                0.9286541098744694,
+                0.36598067213777946,
+                -0.3977739035295721
+              ],
+              [
+                -0.9981022068051539,
+                -0.05205371265834846,
+                -0.032899783725191145,
+                -0.4275715316745807
+              ],
+              [
+                -0.011501866624410717,
+                -0.36727640165376735,
+                0.9300407259106536,
+                0.8988011026069372
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "static_world": true
+          },
+          "metrics": {
+            "stability": true,
+            "plan": true,
+            "reach": true,
+            "affordance": null,
+            "safe": true
+          },
+          "first_failure": null,
+          "opening_m": 0.0677634560429857,
+          "stability_width_m": 0.07885944641113835,
+          "planning_reason": null,
+          "affordance_source": null
+        },
+        {
+          "id": "can_receiver_27_0003_right_A1",
+          "split": "S0",
+          "receiver": {
+            "id": "can_receiver_27_0003_right",
+            "side": "right",
+            "seed": 27,
+            "sample_index": 3,
+            "T_world_hand": [
+              [
+                -0.060495386888890446,
+                0.9286541098744694,
+                0.36598067213777946,
+                -0.3977739035295721
+              ],
+              [
+                -0.9981022068051539,
+                -0.05205371265834846,
+                -0.032899783725191145,
+                -0.4275715316745807
+              ],
+              [
+                -0.011501866624410717,
+                -0.36727640165376735,
+                0.9300407259106536,
+                0.8988011026069372
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "static_world": true
+          },
+          "metrics": {
+            "stability": true,
+            "plan": true,
+            "reach": true,
+            "affordance": null,
+            "safe": true
+          },
+          "first_failure": null,
+          "opening_m": 0.07348249850522212,
+          "stability_width_m": 0.08223995276288679,
+          "planning_reason": null,
+          "affordance_source": null
+        },
+        {
+          "id": "can_receiver_27_0003_right_A2",
+          "split": "S0",
+          "receiver": {
+            "id": "can_receiver_27_0003_right",
+            "side": "right",
+            "seed": 27,
+            "sample_index": 3,
+            "T_world_hand": [
+              [
+                -0.060495386888890446,
+                0.9286541098744694,
+                0.36598067213777946,
+                -0.3977739035295721
+              ],
+              [
+                -0.9981022068051539,
+                -0.05205371265834846,
+                -0.032899783725191145,
+                -0.4275715316745807
+              ],
+              [
+                -0.011501866624410717,
+                -0.36727640165376735,
+                0.9300407259106536,
+                0.8988011026069372
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "static_world": true
+          },
+          "metrics": {
+            "stability": true,
+            "plan": true,
+            "reach": true,
+            "affordance": null,
+            "safe": true
+          },
+          "first_failure": null,
+          "opening_m": 0.0704094913464205,
+          "stability_width_m": 0.07491674701100637,
+          "planning_reason": null,
+          "affordance_source": null
+        },
+        {
+          "id": "can_receiver_27_0003_right_A3",
+          "split": "S0",
+          "receiver": {
+            "id": "can_receiver_27_0003_right",
+            "side": "right",
+            "seed": 27,
+            "sample_index": 3,
+            "T_world_hand": [
+              [
+                -0.060495386888890446,
+                0.9286541098744694,
+                0.36598067213777946,
+                -0.3977739035295721
+              ],
+              [
+                -0.9981022068051539,
+                -0.05205371265834846,
+                -0.032899783725191145,
+                -0.4275715316745807
+              ],
+              [
+                -0.011501866624410717,
+                -0.36727640165376735,
+                0.9300407259106536,
+                0.8988011026069372
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "static_world": true
+          },
+          "metrics": {
+            "stability": true,
+            "plan": true,
+            "reach": true,
+            "affordance": null,
+            "safe": true
+          },
+          "first_failure": null,
+          "opening_m": 0.0704094913464205,
+          "stability_width_m": 0.07491674701100637,
+          "planning_reason": null,
+          "affordance_source": null
+        }
+      ]
+    },
+    {
+      "run": "screwdriver_s1_video",
+      "trials": 16,
+      "frames": 2518,
+      "modes": {
+        "A1": {
+          "trials": 4,
+          "successes": 0,
+          "first_failures": {
+            "plan": 2,
+            "affordance": 2
+          }
+        },
+        "A2": {
+          "trials": 4,
+          "successes": 4,
+          "first_failures": {}
+        },
+        "A3": {
+          "trials": 4,
+          "successes": 4,
+          "first_failures": {}
+        },
+        "FS": {
+          "trials": 4,
+          "successes": 4,
+          "first_failures": {}
+        }
+      },
+      "trial_results": [
+        {
+          "id": "screwdriver_receiver_27_0000_left_FS",
+          "split": "S1",
+          "receiver": {
+            "id": "screwdriver_receiver_27_0000_left",
+            "side": "left",
+            "seed": 27,
+            "sample_index": 0,
+            "T_world_hand": [
+              [
+                -0.7989761138114531,
+                0.5924119614915407,
+                -0.10336942217354914,
+                -0.4315952566762743
+              ],
+              [
+                -0.5864460113807016,
+                -0.7295126669594882,
+                0.3519834434761399,
+                -0.20560212400168132
+              ],
+              [
+                0.1331098993103598,
+                0.3418469491269452,
+                0.9302808275344525,
+                0.8939267814753498
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "static_world": true
+          },
+          "metrics": {
+            "stability": true,
+            "plan": true,
+            "reach": true,
+            "affordance": true,
+            "safe": true
+          },
+          "first_failure": null,
+          "opening_m": 0.012133544813589532,
+          "stability_width_m": 0.06563532628456616,
+          "planning_reason": null,
+          "affordance_source": "Isaac Sim original USD finger colliders versus supplied usage-region boxes"
+        },
+        {
+          "id": "screwdriver_receiver_27_0000_left_A1",
+          "split": "S1",
+          "receiver": {
+            "id": "screwdriver_receiver_27_0000_left",
+            "side": "left",
+            "seed": 27,
+            "sample_index": 0,
+            "T_world_hand": [
+              [
+                -0.7989761138114531,
+                0.5924119614915407,
+                -0.10336942217354914,
+                -0.4315952566762743
+              ],
+              [
+                -0.5864460113807016,
+                -0.7295126669594882,
+                0.3519834434761399,
+                -0.20560212400168132
+              ],
+              [
+                0.1331098993103598,
+                0.3418469491269452,
+                0.9302808275344525,
+                0.8939267814753498
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "static_world": true
+          },
+          "metrics": {
+            "stability": true,
+            "plan": false,
+            "reach": true,
+            "affordance": false,
+            "safe": true
+          },
+          "first_failure": "plan",
+          "opening_m": 0.03689120549688704,
+          "stability_width_m": 0.05208695899061511,
+          "planning_reason": "collision_or_search_failure",
+          "affordance_source": "Isaac Sim original USD finger colliders versus supplied usage-region boxes"
+        },
+        {
+          "id": "screwdriver_receiver_27_0000_left_A2",
+          "split": "S1",
+          "receiver": {
+            "id": "screwdriver_receiver_27_0000_left",
+            "side": "left",
+            "seed": 27,
+            "sample_index": 0,
+            "T_world_hand": [
+              [
+                -0.7989761138114531,
+                0.5924119614915407,
+                -0.10336942217354914,
+                -0.4315952566762743
+              ],
+              [
+                -0.5864460113807016,
+                -0.7295126669594882,
+                0.3519834434761399,
+                -0.20560212400168132
+              ],
+              [
+                0.1331098993103598,
+                0.3418469491269452,
+                0.9302808275344525,
+                0.8939267814753498
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "static_world": true
+          },
+          "metrics": {
+            "stability": true,
+            "plan": true,
+            "reach": true,
+            "affordance": true,
+            "safe": true
+          },
+          "first_failure": null,
+          "opening_m": 0.006881157087630012,
+          "stability_width_m": 0.037752326247900196,
+          "planning_reason": null,
+          "affordance_source": "Isaac Sim original USD finger colliders versus supplied usage-region boxes"
+        },
+        {
+          "id": "screwdriver_receiver_27_0000_left_A3",
+          "split": "S1",
+          "receiver": {
+            "id": "screwdriver_receiver_27_0000_left",
+            "side": "left",
+            "seed": 27,
+            "sample_index": 0,
+            "T_world_hand": [
+              [
+                -0.7989761138114531,
+                0.5924119614915407,
+                -0.10336942217354914,
+                -0.4315952566762743
+              ],
+              [
+                -0.5864460113807016,
+                -0.7295126669594882,
+                0.3519834434761399,
+                -0.20560212400168132
+              ],
+              [
+                0.1331098993103598,
+                0.3418469491269452,
+                0.9302808275344525,
+                0.8939267814753498
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "static_world": true
+          },
+          "metrics": {
+            "stability": true,
+            "plan": true,
+            "reach": true,
+            "affordance": true,
+            "safe": true
+          },
+          "first_failure": null,
+          "opening_m": 0.006881157087630012,
+          "stability_width_m": 0.037752326247900196,
+          "planning_reason": null,
+          "affordance_source": "Isaac Sim original USD finger colliders versus supplied usage-region boxes"
+        },
+        {
+          "id": "screwdriver_receiver_27_0001_right_FS",
+          "split": "S1",
+          "receiver": {
+            "id": "screwdriver_receiver_27_0001_right",
+            "side": "right",
+            "seed": 27,
+            "sample_index": 1,
+            "T_world_hand": [
+              [
+                -0.8349929459634438,
+                0.5279913744639139,
+                -0.1549576996570251,
+                -0.40208566960964576
+              ],
+              [
+                -0.49962051960625076,
+                -0.8454696700441089,
+                -0.1885745831862976,
+                -0.3142946067390956
+              ],
+              [
+                -0.23057778856531208,
+                -0.0800384003289229,
+                0.9697565353701504,
+                0.8618713300835423
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "static_world": true
+          },
+          "metrics": {
+            "stability": true,
+            "plan": true,
+            "reach": true,
+            "affordance": true,
+            "safe": true
+          },
+          "first_failure": null,
+          "opening_m": 0.012133544813589532,
+          "stability_width_m": 0.06563532628456616,
+          "planning_reason": null,
+          "affordance_source": "Isaac Sim original USD finger colliders versus supplied usage-region boxes"
+        },
+        {
+          "id": "screwdriver_receiver_27_0001_right_A1",
+          "split": "S1",
+          "receiver": {
+            "id": "screwdriver_receiver_27_0001_right",
+            "side": "right",
+            "seed": 27,
+            "sample_index": 1,
+            "T_world_hand": [
+              [
+                -0.8349929459634438,
+                0.5279913744639139,
+                -0.1549576996570251,
+                -0.40208566960964576
+              ],
+              [
+                -0.49962051960625076,
+                -0.8454696700441089,
+                -0.1885745831862976,
+                -0.3142946067390956
+              ],
+              [
+                -0.23057778856531208,
+                -0.0800384003289229,
+                0.9697565353701504,
+                0.8618713300835423
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "static_world": true
+          },
+          "metrics": {
+            "stability": true,
+            "plan": false,
+            "reach": false,
+            "affordance": false,
+            "safe": true
+          },
+          "first_failure": "plan",
+          "opening_m": 0.03689120549688704,
+          "stability_width_m": 0.05208695899061511,
+          "planning_reason": "ik_failure",
+          "affordance_source": "Isaac Sim original USD finger colliders versus supplied usage-region boxes"
+        },
+        {
+          "id": "screwdriver_receiver_27_0001_right_A2",
+          "split": "S1",
+          "receiver": {
+            "id": "screwdriver_receiver_27_0001_right",
+            "side": "right",
+            "seed": 27,
+            "sample_index": 1,
+            "T_world_hand": [
+              [
+                -0.8349929459634438,
+                0.5279913744639139,
+                -0.1549576996570251,
+                -0.40208566960964576
+              ],
+              [
+                -0.49962051960625076,
+                -0.8454696700441089,
+                -0.1885745831862976,
+                -0.3142946067390956
+              ],
+              [
+                -0.23057778856531208,
+                -0.0800384003289229,
+                0.9697565353701504,
+                0.8618713300835423
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "static_world": true
+          },
+          "metrics": {
+            "stability": true,
+            "plan": true,
+            "reach": true,
+            "affordance": true,
+            "safe": true
+          },
+          "first_failure": null,
+          "opening_m": 0.006881157087630012,
+          "stability_width_m": 0.037752326247900196,
+          "planning_reason": null,
+          "affordance_source": "Isaac Sim original USD finger colliders versus supplied usage-region boxes"
+        },
+        {
+          "id": "screwdriver_receiver_27_0001_right_A3",
+          "split": "S1",
+          "receiver": {
+            "id": "screwdriver_receiver_27_0001_right",
+            "side": "right",
+            "seed": 27,
+            "sample_index": 1,
+            "T_world_hand": [
+              [
+                -0.8349929459634438,
+                0.5279913744639139,
+                -0.1549576996570251,
+                -0.40208566960964576
+              ],
+              [
+                -0.49962051960625076,
+                -0.8454696700441089,
+                -0.1885745831862976,
+                -0.3142946067390956
+              ],
+              [
+                -0.23057778856531208,
+                -0.0800384003289229,
+                0.9697565353701504,
+                0.8618713300835423
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "static_world": true
+          },
+          "metrics": {
+            "stability": true,
+            "plan": true,
+            "reach": true,
+            "affordance": true,
+            "safe": true
+          },
+          "first_failure": null,
+          "opening_m": 0.006881157087630012,
+          "stability_width_m": 0.037752326247900196,
+          "planning_reason": null,
+          "affordance_source": "Isaac Sim original USD finger colliders versus supplied usage-region boxes"
+        },
+        {
+          "id": "screwdriver_receiver_27_0002_left_FS",
+          "split": "S1",
+          "receiver": {
+            "id": "screwdriver_receiver_27_0002_left",
+            "side": "left",
+            "seed": 27,
+            "sample_index": 2,
+            "T_world_hand": [
+              [
+                0.6039542977934311,
+                0.7547225950646551,
+                0.2561894039099118,
+                -0.44898291469414586
+              ],
+              [
+                -0.7740050170709497,
+                0.6320748609156606,
+                -0.037384538882365925,
+                -0.2862071217586444
+              ],
+              [
+                -0.19014583804501817,
+                -0.17571333101765718,
+                0.9659034038540484,
+                0.92299506853764
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "static_world": true
+          },
+          "metrics": {
+            "stability": true,
+            "plan": true,
+            "reach": true,
+            "affordance": true,
+            "safe": true
+          },
+          "first_failure": null,
+          "opening_m": 0.012133544813589532,
+          "stability_width_m": 0.06563532628456616,
+          "planning_reason": null,
+          "affordance_source": "Isaac Sim original USD finger colliders versus supplied usage-region boxes"
+        },
+        {
+          "id": "screwdriver_receiver_27_0002_left_A1",
+          "split": "S1",
+          "receiver": {
+            "id": "screwdriver_receiver_27_0002_left",
+            "side": "left",
+            "seed": 27,
+            "sample_index": 2,
+            "T_world_hand": [
+              [
+                0.6039542977934311,
+                0.7547225950646551,
+                0.2561894039099118,
+                -0.44898291469414586
+              ],
+              [
+                -0.7740050170709497,
+                0.6320748609156606,
+                -0.037384538882365925,
+                -0.2862071217586444
+              ],
+              [
+                -0.19014583804501817,
+                -0.17571333101765718,
+                0.9659034038540484,
+                0.92299506853764
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "static_world": true
+          },
+          "metrics": {
+            "stability": true,
+            "plan": true,
+            "reach": true,
+            "affordance": false,
+            "safe": true
+          },
+          "first_failure": "affordance",
+          "opening_m": 0.03689120549688704,
+          "stability_width_m": 0.05208695899061511,
+          "planning_reason": null,
+          "affordance_source": "Isaac Sim original USD finger colliders versus supplied usage-region boxes"
+        },
+        {
+          "id": "screwdriver_receiver_27_0002_left_A2",
+          "split": "S1",
+          "receiver": {
+            "id": "screwdriver_receiver_27_0002_left",
+            "side": "left",
+            "seed": 27,
+            "sample_index": 2,
+            "T_world_hand": [
+              [
+                0.6039542977934311,
+                0.7547225950646551,
+                0.2561894039099118,
+                -0.44898291469414586
+              ],
+              [
+                -0.7740050170709497,
+                0.6320748609156606,
+                -0.037384538882365925,
+                -0.2862071217586444
+              ],
+              [
+                -0.19014583804501817,
+                -0.17571333101765718,
+                0.9659034038540484,
+                0.92299506853764
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "static_world": true
+          },
+          "metrics": {
+            "stability": true,
+            "plan": true,
+            "reach": true,
+            "affordance": true,
+            "safe": true
+          },
+          "first_failure": null,
+          "opening_m": 0.006881157087630012,
+          "stability_width_m": 0.037752326247900196,
+          "planning_reason": null,
+          "affordance_source": "Isaac Sim original USD finger colliders versus supplied usage-region boxes"
+        },
+        {
+          "id": "screwdriver_receiver_27_0002_left_A3",
+          "split": "S1",
+          "receiver": {
+            "id": "screwdriver_receiver_27_0002_left",
+            "side": "left",
+            "seed": 27,
+            "sample_index": 2,
+            "T_world_hand": [
+              [
+                0.6039542977934311,
+                0.7547225950646551,
+                0.2561894039099118,
+                -0.44898291469414586
+              ],
+              [
+                -0.7740050170709497,
+                0.6320748609156606,
+                -0.037384538882365925,
+                -0.2862071217586444
+              ],
+              [
+                -0.19014583804501817,
+                -0.17571333101765718,
+                0.9659034038540484,
+                0.92299506853764
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "static_world": true
+          },
+          "metrics": {
+            "stability": true,
+            "plan": true,
+            "reach": true,
+            "affordance": true,
+            "safe": true
+          },
+          "first_failure": null,
+          "opening_m": 0.006881157087630012,
+          "stability_width_m": 0.037752326247900196,
+          "planning_reason": null,
+          "affordance_source": "Isaac Sim original USD finger colliders versus supplied usage-region boxes"
+        },
+        {
+          "id": "screwdriver_receiver_27_0003_right_FS",
+          "split": "S1",
+          "receiver": {
+            "id": "screwdriver_receiver_27_0003_right",
+            "side": "right",
+            "seed": 27,
+            "sample_index": 3,
+            "T_world_hand": [
+              [
+                0.2775737180412409,
+                0.951914957056747,
+                -0.12965625933372338,
+                -0.40690518110375906
+              ],
+              [
+                -0.9499611721862208,
+                0.2920853255987638,
+                0.11072458583551333,
+                -0.3743788022384831
+              ],
+              [
+                0.14327108009414707,
+                0.0924341771290045,
+                0.9853574582389585,
+                0.9247930425852459
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "static_world": true
+          },
+          "metrics": {
+            "stability": true,
+            "plan": true,
+            "reach": true,
+            "affordance": true,
+            "safe": true
+          },
+          "first_failure": null,
+          "opening_m": 0.012133544813589532,
+          "stability_width_m": 0.06563532628456616,
+          "planning_reason": null,
+          "affordance_source": "Isaac Sim original USD finger colliders versus supplied usage-region boxes"
+        },
+        {
+          "id": "screwdriver_receiver_27_0003_right_A1",
+          "split": "S1",
+          "receiver": {
+            "id": "screwdriver_receiver_27_0003_right",
+            "side": "right",
+            "seed": 27,
+            "sample_index": 3,
+            "T_world_hand": [
+              [
+                0.2775737180412409,
+                0.951914957056747,
+                -0.12965625933372338,
+                -0.40690518110375906
+              ],
+              [
+                -0.9499611721862208,
+                0.2920853255987638,
+                0.11072458583551333,
+                -0.3743788022384831
+              ],
+              [
+                0.14327108009414707,
+                0.0924341771290045,
+                0.9853574582389585,
+                0.9247930425852459
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "static_world": true
+          },
+          "metrics": {
+            "stability": true,
+            "plan": true,
+            "reach": true,
+            "affordance": false,
+            "safe": true
+          },
+          "first_failure": "affordance",
+          "opening_m": 0.03689120549688704,
+          "stability_width_m": 0.05208695899061511,
+          "planning_reason": null,
+          "affordance_source": "Isaac Sim original USD finger colliders versus supplied usage-region boxes"
+        },
+        {
+          "id": "screwdriver_receiver_27_0003_right_A2",
+          "split": "S1",
+          "receiver": {
+            "id": "screwdriver_receiver_27_0003_right",
+            "side": "right",
+            "seed": 27,
+            "sample_index": 3,
+            "T_world_hand": [
+              [
+                0.2775737180412409,
+                0.951914957056747,
+                -0.12965625933372338,
+                -0.40690518110375906
+              ],
+              [
+                -0.9499611721862208,
+                0.2920853255987638,
+                0.11072458583551333,
+                -0.3743788022384831
+              ],
+              [
+                0.14327108009414707,
+                0.0924341771290045,
+                0.9853574582389585,
+                0.9247930425852459
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "static_world": true
+          },
+          "metrics": {
+            "stability": true,
+            "plan": true,
+            "reach": true,
+            "affordance": true,
+            "safe": true
+          },
+          "first_failure": null,
+          "opening_m": 0.006881157087630012,
+          "stability_width_m": 0.037752326247900196,
+          "planning_reason": null,
+          "affordance_source": "Isaac Sim original USD finger colliders versus supplied usage-region boxes"
+        },
+        {
+          "id": "screwdriver_receiver_27_0003_right_A3",
+          "split": "S1",
+          "receiver": {
+            "id": "screwdriver_receiver_27_0003_right",
+            "side": "right",
+            "seed": 27,
+            "sample_index": 3,
+            "T_world_hand": [
+              [
+                0.2775737180412409,
+                0.951914957056747,
+                -0.12965625933372338,
+                -0.40690518110375906
+              ],
+              [
+                -0.9499611721862208,
+                0.2920853255987638,
+                0.11072458583551333,
+                -0.3743788022384831
+              ],
+              [
+                0.14327108009414707,
+                0.0924341771290045,
+                0.9853574582389585,
+                0.9247930425852459
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "static_world": true
+          },
+          "metrics": {
+            "stability": true,
+            "plan": true,
+            "reach": true,
+            "affordance": true,
+            "safe": true
+          },
+          "first_failure": null,
+          "opening_m": 0.006881157087630012,
+          "stability_width_m": 0.037752326247900196,
+          "planning_reason": null,
+          "affordance_source": "Isaac Sim original USD finger colliders versus supplied usage-region boxes"
+        }
+      ]
+    },
+    {
+      "run": "neural_video",
+      "trials": 1,
+      "frames": 1,
+      "modes": {
+        "intent_aware": {
+          "trials": 1,
+          "successes": 0,
+          "first_failures": {
+            "plan": 1
+          }
+        }
+      },
+      "trial_results": [
+        {
+          "id": "can_intent_aware",
+          "split": "S0",
+          "receiver": null,
+          "metrics": {
+            "stability": true,
+            "plan": false,
+            "reach": false,
+            "affordance": null,
+            "safe": true
+          },
+          "first_failure": "plan",
+          "opening_m": 0.0704094913464205,
+          "stability_width_m": 0.07491674701100637,
+          "planning_reason": "collision_or_search_failure",
+          "affordance_source": null
+        }
+      ]
+    },
+    {
+      "run": "affordance_control",
+      "trials": 1,
+      "frames": 97,
+      "modes": {
+        "physics_query_control": {
+          "trials": 1,
+          "successes": 0,
+          "first_failures": {
+            "affordance": 1
+          }
+        }
+      },
+      "trial_results": [
+        {
+          "id": "can_affordance_overlap_control",
+          "split": "S1",
+          "receiver": {
+            "id": "can_receiver_27_0001_right",
+            "side": "right",
+            "seed": 27,
+            "sample_index": 1,
+            "T_world_hand": [
+              [
+                -0.5970992220070535,
+                0.7365625132704214,
+                0.3177234381082581,
+                -0.3661114683168457
+              ],
+              [
+                -0.7420754004466894,
+                -0.6576070315878335,
+                0.12991186265358606,
+                -0.2828510732371834
+              ],
+              [
+                0.3046253750600194,
+                -0.15820447544554106,
+                0.9392415689366309,
+                0.8991731176242256
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "static_world": true
+          },
+          "metrics": {
+            "stability": true,
+            "plan": true,
+            "reach": true,
+            "affordance": false,
+            "safe": true
+          },
+          "first_failure": "affordance",
+          "opening_m": 0.0677634560429857,
+          "stability_width_m": 0.07885944641113835,
+          "planning_reason": null,
+          "affordance_source": "Isaac Sim original USD finger colliders versus supplied usage-region boxes"
+        }
+      ]
+    }
+  ]
+}

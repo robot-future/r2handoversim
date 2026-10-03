@@ -1,0 +1,277 @@
+{
+  "schema_version": "handover.paper_reference.v1",
+  "title": "R2HandoverSim",
+  "source": {
+    "file": "IROS26_3330_FI.pdf",
+    "sha256": "13aa2642694d2f8ab98a8e83c35613beb9dd802c6c18a59811b6e77760afce87",
+    "table": "I",
+    "page": 4,
+    "sections": [
+      "III-A",
+      "III-B",
+      "III-C",
+      "III-D",
+      "III-E",
+      "IV-A",
+      "IV-B"
+    ],
+    "figures": [
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "record_kind": "reconstructed_replay",
+  "protocol": {
+    "robot": "UR5e",
+    "gripper": "Robotiq 2F-85",
+    "max_opening_m": 0.085,
+    "static_receiver": true,
+    "tabletop_pickup": false,
+    "reach_offset_m": 0.12,
+    "reach_radius_m": 0.1,
+    "first_failure_order": [
+      "stability",
+      "plan",
+      "reach",
+      "affordance",
+      "safe"
+    ],
+    "aggregation": "trial -> equal object means -> equal S0/S1 mean",
+    "paper_interaction_sequences": {
+      "left": 200,
+      "right": 200
+    },
+    "paper_grasp_candidates_per_object": 100
+  },
+  "replay": {
+    "trials_per_method_split": 1000,
+    "object_membership_source": "replay assumption; manuscript does not enumerate split membership",
+    "trial_count_source": "replay denominator; original simulation trial count not reported",
+    "trajectory_source": "deterministic keyframe reconstruction; not original baseline output",
+    "timing_source": "synthetic stage allocations constrained to Table I means",
+    "object_geometry": "local configured point clouds; original OBJ surfaces via --asset-config; procedural stand-ins if neither is supplied",
+    "receiver_index_source": "replay template indices, not recovered original interaction sequence IDs"
+  },
+  "splits": {
+    "S0": [
+      "bottle",
+      "bowl",
+      "can",
+      "cup",
+      "dispenser",
+      "eyeglasses",
+      "gamecontroller",
+      "headphones"
+    ],
+    "S1": [
+      "binoculars",
+      "drill",
+      "hammers",
+      "knife",
+      "pincer",
+      "scissors",
+      "screwdriver",
+      "toothbrush"
+    ]
+  },
+  "methods": {
+    "FC-Handover": {
+      "human_pose": "GanHand",
+      "grasp": "GraspIt! opposite hand",
+      "orientation": "180 degrees opposite wrist-middle-finger direction"
+    },
+    "Handover-VA": {
+      "regions": "AffNet-DR",
+      "grasp": "ICP within functional regions",
+      "placement": "opposite palm center",
+      "orientation": "utility axis presents handle"
+    },
+    "Contact-Handover": {
+      "contact": "3D VoxNet",
+      "grasp": "Contact-GraspNet + DBSCAN + hand collision filtering",
+      "placement": "15 cm above palm center",
+      "orientation": "minimum collision cost"
+    },
+    "Intent-Handover": {
+      "human_pose": "Text2HOI",
+      "grasp": "affordance and safety scoring",
+      "placement": "15 cm above palm center",
+      "orientation": "15 degrees inward along palm plane"
+    }
+  },
+  "rows": [
+    {
+      "split": "S0",
+      "method": "FC-Handover",
+      "SR": 70.4,
+      "Tplan": 1.48,
+      "Texec": 8.56,
+      "Ttot": 10.04,
+      "Fplan": 18,
+      "Freach": 2,
+      "Fsafe": 5.4,
+      "Fstab": 4.2,
+      "Fafford": null
+    },
+    {
+      "split": "S0",
+      "method": "Handover-VA",
+      "SR": 64.8,
+      "Tplan": 0.58,
+      "Texec": 8.4,
+      "Ttot": 8.98,
+      "Fplan": 20,
+      "Freach": 5,
+      "Fsafe": 7.8,
+      "Fstab": 2.4,
+      "Fafford": null
+    },
+    {
+      "split": "S0",
+      "method": "Contact-Handover",
+      "SR": 77,
+      "Tplan": 0.92,
+      "Texec": 8.48,
+      "Ttot": 9.4,
+      "Fplan": 13,
+      "Freach": 3.6,
+      "Fsafe": 2.2,
+      "Fstab": 4.2,
+      "Fafford": null
+    },
+    {
+      "split": "S0",
+      "method": "Intent-Handover",
+      "SR": 69.8,
+      "Tplan": 2.32,
+      "Texec": 8.7,
+      "Ttot": 11.02,
+      "Fplan": 16.4,
+      "Freach": 4.8,
+      "Fsafe": 5.4,
+      "Fstab": 3.6,
+      "Fafford": null
+    },
+    {
+      "split": "S1",
+      "method": "FC-Handover",
+      "SR": 48.8,
+      "Tplan": 1.76,
+      "Texec": 8.92,
+      "Ttot": 10.68,
+      "Fplan": 23,
+      "Freach": 4.6,
+      "Fsafe": 7.8,
+      "Fstab": 6.6,
+      "Fafford": 9.2
+    },
+    {
+      "split": "S1",
+      "method": "Handover-VA",
+      "SR": 39,
+      "Tplan": 0.78,
+      "Texec": 8.7,
+      "Ttot": 9.48,
+      "Fplan": 29,
+      "Freach": 9.2,
+      "Fsafe": 12.6,
+      "Fstab": 4,
+      "Fafford": 6.2
+    },
+    {
+      "split": "S1",
+      "method": "Contact-Handover",
+      "SR": 55.4,
+      "Tplan": 1.16,
+      "Texec": 8.76,
+      "Ttot": 9.92,
+      "Fplan": 19.6,
+      "Freach": 8.4,
+      "Fsafe": 5,
+      "Fstab": 7.4,
+      "Fafford": 4.2
+    },
+    {
+      "split": "S1",
+      "method": "Intent-Handover",
+      "SR": 66,
+      "Tplan": 2.62,
+      "Texec": 8.96,
+      "Ttot": 11.58,
+      "Fplan": 14.8,
+      "Freach": 4,
+      "Fsafe": 7.2,
+      "Fstab": 4.2,
+      "Fafford": 3.8
+    },
+    {
+      "split": "Avg",
+      "method": "FC-Handover",
+      "SR": 59.6,
+      "Tplan": 1.62,
+      "Texec": 8.74,
+      "Ttot": 10.36,
+      "Fplan": 20.5,
+      "Freach": 3.3,
+      "Fsafe": 6.6,
+      "Fstab": 5.4,
+      "Fafford": 4.6
+    },
+    {
+      "split": "Avg",
+      "method": "Handover-VA",
+      "SR": 51.9,
+      "Tplan": 0.68,
+      "Texec": 8.55,
+      "Ttot": 9.23,
+      "Fplan": 24.5,
+      "Freach": 7.1,
+      "Fsafe": 10.2,
+      "Fstab": 3.2,
+      "Fafford": 3.1
+    },
+    {
+      "split": "Avg",
+      "method": "Contact-Handover",
+      "SR": 66.2,
+      "Tplan": 1.04,
+      "Texec": 8.62,
+      "Ttot": 9.66,
+      "Fplan": 16.3,
+      "Freach": 6,
+      "Fsafe": 3.6,
+      "Fstab": 5.8,
+      "Fafford": 2.1
+    },
+    {
+      "split": "Avg",
+      "method": "Intent-Handover",
+      "SR": 67.9,
+      "Tplan": 2.47,
+      "Texec": 8.83,
+      "Ttot": 11.3,
+      "Fplan": 15.6,
+      "Freach": 4.4,
+      "Fsafe": 6.3,
+      "Fstab": 3.9,
+      "Fafford": 1.9
+    }
+  ],
+  "coverage": {
+    "included": [
+      "Table I: all 12 rows, success/failure/timing columns",
+      "Sec. III-A-E protocol and settings",
+      "Sec. IV-A baseline setting references",
+      "Fig. 4 paired method replay views",
+      "Fig. 5 success and five failure categories"
+    ],
+    "excluded": [
+      "Table II real hardware",
+      "Fig. 6 real hardware",
+      "Fig. 7 participant ratings",
+      "Sec. IV-C/D real experiments and questionnaires"
+    ]
+  }
+}

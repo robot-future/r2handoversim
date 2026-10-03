@@ -1,0 +1,31 @@
+name: Release checks
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        python: ['3.10', '3.11', '3.12']
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.0.0
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install build twine
+      - run: python -m build
+      - run: python -m twine check dist/*
+      - name: Install only the built wheel
+        run: python -m pip install "$(find dist -name '*.whl')[planning,assets]"
+      - run: python -m unittest discover -s tests -v
+      - name: Exercise installed package outside the checkout
+        run: cd /tmp && python "$GITHUB_WORKSPACE/scripts/release_smoke.py"
+      - name: Rebuild the source archive
+        run: |
+          mkdir /tmp/r2-source
+          tar -xzf dist/*.tar.gz -C /tmp/r2-source --strip-components=1
+          cd /tmp/r2-source
+          python -m build --wheel
+      - uses: actions/upload-artifact@v7.0.1
+        with:
+          name: r2handoversim-python-${{ matrix.python }}
+          path: dist/*

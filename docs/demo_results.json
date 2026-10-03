@@ -1,0 +1,146 @@
+[
+  {
+    "trial_id": "hammer_intent_aware",
+    "metrics": {
+      "stability": true,
+      "plan": true,
+      "reach": true,
+      "affordance": true,
+      "safe": true
+    },
+    "first_failure": null,
+    "contact_frame_count": 0
+  },
+  {
+    "trial_id": "hammer_region_agnostic",
+    "metrics": {
+      "stability": true,
+      "plan": true,
+      "reach": true,
+      "affordance": true,
+      "safe": true
+    },
+    "first_failure": null,
+    "contact_frame_count": 0
+  },
+  {
+    "trial_id": "hammer_execution_deviation",
+    "metrics": {
+      "stability": true,
+      "plan": true,
+      "reach": true,
+      "affordance": true,
+      "safe": false
+    },
+    "first_failure": "safe",
+    "contact_frame_count": 15
+  },
+  {
+    "trial_id": "hammer_missed_delivery",
+    "metrics": {
+      "stability": true,
+      "plan": true,
+      "reach": false,
+      "affordance": true,
+      "safe": true
+    },
+    "first_failure": "reach",
+    "contact_frame_count": 0
+  },
+  {
+    "trial_id": "screwdriver_intent_aware",
+    "metrics": {
+      "stability": true,
+      "plan": true,
+      "reach": true,
+      "affordance": true,
+      "safe": true
+    },
+    "first_failure": null,
+    "contact_frame_count": 0
+  },
+  {
+    "trial_id": "screwdriver_region_agnostic",
+    "metrics": {
+      "stability": true,
+      "plan": true,
+      "reach": true,
+      "affordance": false,
+      "safe": true
+    },
+    "first_failure": "affordance",
+    "contact_frame_count": 0
+  },
+  {
+    "trial_id": "screwdriver_execution_deviation",
+    "metrics": {
+      "stability": true,
+      "plan": true,
+      "reach": true,
+      "affordance": true,
+      "safe": false
+    },
+    "first_failure": "safe",
+    "contact_frame_count": 13
+  },
+  {
+    "trial_id": "screwdriver_missed_delivery",
+    "metrics": {
+      "stability": true,
+      "plan": true,
+      "reach": false,
+      "affordance": true,
+      "safe": true
+    },
+    "first_failure": "reach",
+    "contact_frame_count": 0
+  },
+  {
+    "trial_id": "bottle_intent_aware",
+    "metrics": {
+      "stability": true,
+      "plan": true,
+      "reach": true,
+      "affordance": null,
+      "safe": true
+    },
+    "first_failure": null,
+    "contact_frame_count": 0
+  },
+  {
+    "trial_id": "bottle_region_agnostic",
+    "metrics": {
+      "stability": true,
+      "plan": true,
+      "reach": true,
+      "affordance": null,
+      "safe": true
+    },
+    "first_failure": null,
+    "contact_frame_count": 0
+  },
+  {
+    "trial_id": "bottle_execution_deviation",
+    "metrics": {
+      "stability": true,
+      "plan": true,
+      "reach": true,
+      "affordance": null,
+      "safe": false
+    },
+    "first_failure": "safe",
+    "contact_frame_count": 15
+  },
+  {
+    "trial_id": "bottle_missed_delivery",
+    "metrics": {
+      "stability": true,
+      "plan": true,
+      "reach": false,
+      "affordance": null,
+      "safe": true
+    },
+    "first_failure": "reach",
+    "contact_frame_count": 0
+  }
+]

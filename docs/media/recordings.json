@@ -1,0 +1,168 @@
+{
+  "kind": "evaluated_isaacsim_replay",
+  "renderer": "pathtraced",
+  "visual_style": "lab",
+  "seed": 41,
+  "receiver_montage": [
+    {
+      "trial_id": "can_A2_can_receiver_41_0010_left",
+      "object_id": "can",
+      "variant": "A2",
+      "success": true,
+      "first_failure": null,
+      "metrics": {
+        "stability": true,
+        "plan": true,
+        "reach": true,
+        "affordance": null,
+        "safe": true
+      },
+      "camera": "overview",
+      "frames": 79,
+      "terminal_joint_deg": [
+        6.0323,
+        -62.1883,
+        70.4656,
+        -109.3449,
+        -49.1887,
+        -42.9507
+      ],
+      "sample_index": 10,
+      "side": "left",
+      "detail_overview_arrays_identical": true
+    },
+    {
+      "trial_id": "can_A2_can_receiver_41_0005_right",
+      "object_id": "can",
+      "variant": "A2",
+      "success": true,
+      "first_failure": null,
+      "metrics": {
+        "stability": true,
+        "plan": true,
+        "reach": true,
+        "affordance": null,
+        "safe": true
+      },
+      "camera": "overview",
+      "frames": 97,
+      "terminal_joint_deg": [
+        13.1951,
+        -72.8928,
+        94.6645,
+        -142.5866,
+        -45.1412,
+        -26.1162
+      ],
+      "sample_index": 5,
+      "side": "right",
+      "detail_overview_arrays_identical": true
+    },
+    {
+      "trial_id": "screwdriver_A2_screwdriver_receiver_41_0000_left",
+      "object_id": "screwdriver",
+      "variant": "A2",
+      "success": true,
+      "first_failure": null,
+      "metrics": {
+        "stability": true,
+        "plan": true,
+        "reach": true,
+        "affordance": true,
+        "safe": true
+      },
+      "camera": "overview",
+      "frames": 169,
+      "terminal_joint_deg": [
+        19.547,
+        -78.6855,
+        76.5553,
+        -102.2412,
+        -107.9211,
+        94.6029
+      ],
+      "sample_index": 0,
+      "side": "left",
+      "detail_overview_arrays_identical": true
+    },
+    {
+      "trial_id": "screwdriver_A2_screwdriver_receiver_41_0021_right",
+      "object_id": "screwdriver",
+      "variant": "A2",
+      "success": true,
+      "first_failure": null,
+      "metrics": {
+        "stability": true,
+        "plan": true,
+        "reach": true,
+        "affordance": true,
+        "safe": true
+      },
+      "camera": "overview",
+      "frames": 127,
+      "terminal_joint_deg": [
+        9.2306,
+        -75.2116,
+        86.2145,
+        -121.7259,
+        -78.0028,
+        70.3029
+      ],
+      "sample_index": 21,
+      "side": "right",
+      "detail_overview_arrays_identical": true
+    }
+  ],
+  "hero_trial": "screwdriver_FS_screwdriver_receiver_41_0005_right",
+  "hero_metrics": {
+    "stability": true,
+    "plan": true,
+    "reach": true,
+    "affordance": true,
+    "safe": true
+  },
+  "hero_camera_views": [
+    "overview",
+    "right",
+    "left",
+    "top"
+  ],
+  "hero_view_arrays_identical": true,
+  "hero_frames": 91,
+  "hero_terminal_joint_deg": [
+    18.0479,
+    -51.8919,
+    55.697,
+    -84.2871,
+    -140.8666,
+    6.3134
+  ],
+  "receiver_sampling": {
+    "position_bounds_m": [
+      [
+        -0.72,
+        -0.45,
+        0.88
+      ],
+      [
+        -0.6,
+        -0.3,
+        0.98
+      ]
+    ],
+    "rpy_bounds_deg": [
+      [
+        -25,
+        -25,
+        -150
+      ],
+      [
+        25,
+        25,
+        -50
+      ]
+    ],
+    "require_reference_ik": true
+  },
+  "showcase_selection": "Posture-reviewed examples from the seeded receiver bank"
+}

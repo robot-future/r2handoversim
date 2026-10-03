@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying paper when using this release."
+type: software
+title: "R2HandoverSim: A Simulation Framework and Benchmark for Robot-to-Human Object Handovers"
+version: 0.11.0
+authors:
+  - family-names: Zhang
+    given-names: Hanxin
+  - family-names: Dhafer
+    given-names: Abdulqader
+  - family-names: Dong
+    given-names: Hongbiao
+  - family-names: Hao
+    given-names: Zhou Daniel
+license: MIT
+repository-code: "https://github.com/Hanxin-Zhang/r2handoversim"

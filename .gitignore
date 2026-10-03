@@ -34,3 +34,10 @@ build/
 .env
 .env.*
 !.env.example
+
+# Simulator generated files
+*.egg-info/
+outputs/
+checkpoints/
+data/
+.source-import/

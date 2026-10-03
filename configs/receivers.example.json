@@ -1,0 +1,76 @@
+{
+  "schema_version": "handover.receivers.v1",
+  "templates": [
+    {
+      "id": "mano_open_left",
+      "side": "left",
+      "mesh": "local_hands/mano_left.obj",
+      "scale_to_m": 1.0,
+      "palm_position_mesh": [
+        -0.02901388332247734,
+        0.002268014708533883,
+        -0.0043245116248726845
+      ],
+      "palm_normal_mesh": [
+        -0.0816141739487648,
+        -0.9918103814125061,
+        0.09824106842279434
+      ],
+      "finger_direction_mesh": [
+        0.09466041624546051,
+        -0.0014789644628763199,
+        -0.0033575384877622128
+      ],
+      "source_kind": "Neutral MANO mesh decoded from locally licensed model; generated template"
+    },
+    {
+      "id": "mano_open_right",
+      "side": "right",
+      "mesh": "local_hands/mano_right.obj",
+      "scale_to_m": 1.0,
+      "palm_position_mesh": [
+        0.02901388332247734,
+        0.002268014708533883,
+        -0.0043245116248726845
+      ],
+      "palm_normal_mesh": [
+        0.0816141739487648,
+        -0.9918103814125061,
+        0.09824106842279434
+      ],
+      "finger_direction_mesh": [
+        -0.09466041624546051,
+        -0.0014789644628763199,
+        -0.0033575384877622128
+      ],
+      "source_kind": "Neutral MANO mesh decoded from locally licensed model; generated template"
+    }
+  ],
+  "sampling": {
+    "position_bounds_m": [
+      [
+        -0.72,
+        -0.45,
+        0.88
+      ],
+      [
+        -0.6,
+        -0.3,
+        0.98
+      ]
+    ],
+    "rpy_bounds_deg": [
+      [
+        -25,
+        -25,
+        -150
+      ],
+      [
+        25,
+        25,
+        -50
+      ]
+    ],
+    "require_reference_ik": true
+  }
+}
